@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Edit contact</h1>
+	Logged in as:{{username}}<br>
+
+	<form action="/contacts/editcontact/" method="POST">
+	{% csrf_token %}
+	NAME:<input type="text" name="name"><br>
+	CONTACT NUMBER:<input type="text" name="number"><br>
+	<input type="submit" value="submit"><br>
+	<a href="/contacts/home/">BACK</a><br>
+</body>
+</html>

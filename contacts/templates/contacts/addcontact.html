@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+	Logged in as:{{username}}<br>
+
+	<form action="" method="POST">
+	{% csrf_token %}
+	NAME:<input type="text" name="name" value="{{co.name}}"><br>
+	CONTACT NUMBER:<input type="text" name="number" value="{{co.number}}"><br>
+	<input type="submit" value="submit"><br>
+	{{ request.GET.error }}
+	<a href="/contacts/">Back</a><br>
+</body>
+</html>

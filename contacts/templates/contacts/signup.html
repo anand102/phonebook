@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<h1>Signup</h1><br>
+<body>
+  <form action="/contacts/signup/" method="POST"><br>
+  {% csrf_token %}
+  USER NAME<input type="text" name="username"><br>
+  PASSWORD:<input type="password" name="password"><br>
+  CONFIRM PASSWORD:<input type="password" name="confirmpassword"><br>
+  <input type="submit" value="submit"><br>
+  {{ request.GET.error }}
+  <a href="/contacts/login">Login</a><br>
+</body>
+</html>
